@@ -372,11 +372,50 @@
         }
 
         /* ==========================================
-           HERO BANNER ARCHITECTURE
+           NEW SVM STYLE STYLISH SLIDER ARCHITECTURE
            ========================================== */
-        .hero-section {
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 34, 68, 0.9)), url('https://srikrishnadevaraya.co.in/_next/image?url=%2Fimages%2Fffa_png&w=1920&q=75') center/cover no-repeat;
-            height: 380px;
+        .hero-slider-section {
+            position: relative;
+            width: 100%;
+            height: 440px;
+            overflow: hidden;
+            background-color: #002244;
+        }
+
+        .slider-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        /* Dark overlay for rich text readability */
+        .slider-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 34, 68, 0.6), rgba(0, 20, 40, 0.7));
+            z-index: 3;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -386,17 +425,79 @@
             padding: 0 20px;
         }
 
-        .hero-section h2 {
-            font-size: 38px;
+        .slider-overlay h2 {
+            font-size: 42px;
             font-weight: 800;
             margin-bottom: 12px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            letter-spacing: 0.5px;
         }
 
-        .hero-section p {
+        .slider-tagline {
+            font-size: 24px;
+            font-weight: 700;
+            color: #f59e0b; /* Golden Accent for Tagline */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        }
+
+        .slider-overlay p.subtext {
             font-size: 18px;
             color: #f8fafc;
-            max-width: 700px;
+            max-width: 750px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Stylish Nav Buttons (SVM style side arrows) */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+            border: none;
+            font-size: 24px;
+            padding: 14px 20px;
+            cursor: pointer;
+            z-index: 4;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .slider-btn:hover {
+            background: #f59e0b;
+            color: #002244;
+        }
+
+        .prev-btn { left: 25px; }
+        .next-btn { right: 25px; }
+
+        /* Navigation Dots */
+        .slider-dots {
+            position: absolute;
+            bottom: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 4;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #f59e0b;
+            width: 28px;
+            border-radius: 10px;
         }
 
         /* CONTENT CORE GRID SYSTEM */
@@ -578,7 +679,6 @@
         .message-img-container img {
             width: 240px;
             height: 300px;
-            /* CRITICAL: object-position: top ensures head is never cut off */
             object-fit: cover;
             object-position: top; 
             border-radius: 8px;
@@ -659,10 +759,10 @@
             padding-top: 10px;
             transition: all 0.6s ease;
         }
-.bar:hover {
-    transform: translateY(-4px);
-    filter: brightness(1.05);
-}
+        .bar:hover {
+            transform: translateY(-4px);
+            filter: brightness(1.05);
+        }
         .bar-label {
             margin-top: 10px;
             font-size: 14px;
@@ -779,6 +879,9 @@
             .message-card { flex-direction: column; align-items: center; text-align: center; }
             .msg-body { border-left: none; border-top: 4px solid #f59e0b; padding-left: 0; padding-top: 20px; }
             .msg-body p.quote { text-align: center; }
+            .hero-slider-section { height: 360px; }
+            .slider-overlay h2 { font-size: 32px; }
+            .slider-tagline { font-size: 18px; }
         }
 
         @media (max-width: 768px) {
@@ -787,10 +890,15 @@
             .main-grid, .data-section, .footer-grid { grid-template-columns: 1fr; }
             .timeline { grid-template-columns: repeat(2, 1fr); }
             .stats-section { flex-direction: column; gap: 30px; }
+            .slider-btn { padding: 10px 14px; font-size: 18px; }
         }
         @media (max-width: 480px) {
             .timeline { grid-template-columns: 1fr; }
             .header-center h1 { font-size: 26px; }
+            .hero-slider-section { height: 300px; }
+            .slider-overlay h2 { font-size: 24px; }
+            .slider-tagline { font-size: 14px; }
+            .slider-overlay p.subtext { font-size: 14px; }
         }
     </style>
 </head>
@@ -838,9 +946,35 @@
         </nav>
     </header>
 
-    <section class="hero-section">
-        <h2>Welcome to Shri Asal Dev Inter College</h2>
-        <p>Providing excellence in high-quality education in rural and semi-urban areas since 1967.</p>
+    <section class="hero-slider-section">
+        <div class="slider-wrapper">
+            <div class="slide active" style="background-image: url('https://i.ibb.co/QFrLRQF7/asaldev.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/k2S9f4dz/Screenshot-2026-06-13-205713.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/JwgLr39H/Screenshot-2026-06-13-205758.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/NngKLysQ/Screenshot-2026-06-13-222853.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/N60pH2Fw/Screenshot-2026-06-13-210242.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/ymFXfvjz/Screenshot-2026-06-13-205923.png');"></div>
+            <div class="slide" style="background-image: url('https://i.ibb.co/8D4B6bB4/Screenshot-2026-06-13-210009.png');"></div>
+        </div>
+
+        <div class="slider-overlay">
+            <h2>Welcome to Shri Asal Dev Inter College</h2>
+            <div class="slider-tagline">Sheelam Param Bhushanam</div>
+            <p class="subtext">Providing excellence in high-quality education in rural and semi-urban areas since 1967.</p>
+        </div>
+
+        <button class="slider-btn prev-btn">&#10094;</button>
+        <button class="slider-btn next-btn">&#10095;</button>
+
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
     </section>
 
     <main class="container">
@@ -1040,5 +1174,62 @@
             <p>&copy; 2026 Shri Asaldev Inter College. All Rights Reserved by Divyansh Pandey.</p>
         </div>
     </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let slideTimer;
+
+        function showSlide(index) {
+            if (index >= slides.length) currentIndex = 0;
+            else if (index < 0) currentIndex = slides.length - 1;
+            else currentIndex = index;
+
+            // Remove active status from all
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Set active to current
+            slides[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+            resetAutoplay();
+        }
+
+        function startAutoplay() {
+            slideTimer = setInterval(nextSlide, 4000); // 4 seconds delay
+        }
+
+        function resetAutoplay() {
+            clearInterval(slideTimer);
+            startAutoplay();
+        }
+
+        // Action Listeners
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+
+        // Run slider on page load
+        startAutoplay();
+    </script>
 </body>
 </html>
