@@ -175,7 +175,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -187,13 +187,11 @@
         body {
             font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
             color: #333333;
-            background-color: #f8fafc; /* Slightly off-white for modern feel */
+            background-color: #f8fafc;
             line-height: 1.6;
         }
 
-        /* ==========================================
-           MODERN HEADER & NAVIGATION STYLING (MVM STYLE)
-           ========================================== */
+        /* HEADER STYLING */
         header {
             background-color: #ffffff;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -202,7 +200,7 @@
         }
 
         .top-bar-modern {
-            background: #17a2b8; /* MVM style cyan solid bar */
+            background: #17a2b8;
             color: #ffffff;
             display: flex;
             justify-content: space-between;
@@ -245,13 +243,11 @@
             color: #17a2b8;
         }
 
-        /* NEW MVM STYLE MAIN HEADER */
         .main-header-modern {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
-            /* Cyan/Aqua gradient background resembling MVM */
             background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
             border-bottom: 3px solid #00838f;
         }
@@ -273,23 +269,17 @@
 
         .header-center h1 {
             font-size: 42px;
-            color: #d32f2f; /* Red text */
+            color: #d32f2f;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
-            /* White outline effect */
-            text-shadow: 
-                -2px -2px 0 #fff,  
-                 2px -2px 0 #fff,
-                -2px  2px 0 #fff,
-                 2px  2px 0 #fff,
-                 3px  3px 8px rgba(0,0,0,0.3);
+            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, 3px 3px 8px rgba(0,0,0,0.3);
             margin-bottom: 2px;
             font-family: 'Arial Black', Impact, sans-serif;
         }
 
         .sub-title {
-            color: #4a148c; /* Purple text */
+            color: #4a148c;
             font-size: 18px;
             font-weight: 800;
             margin-bottom: 15px;
@@ -372,123 +362,153 @@
         }
 
         /* ==========================================
-           NEW SVM STYLE STYLISH SLIDER ARCHITECTURE
+           HERO SLIDER - HEIGHT FIXED (BIGGER & FULL COVER)
            ========================================== */
-        .hero-slider-section {
+        .hero-slider {
             position: relative;
+            height: 85vh; /* Much larger height to cover images */
+            min-height: 650px;
             width: 100%;
-            height: 440px;
             overflow: hidden;
-            background-color: #002244;
-        }
-
-        .slider-wrapper {
-            width: 100%;
-            height: 100%;
-            position: relative;
+            background-color: #001122;
         }
 
         .slide {
             position: absolute;
-            width: 100%;
-            height: 100%;
             top: 0;
             left: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
             opacity: 0;
-            transition: opacity 0.8s ease-in-out;
-            z-index: 1;
+            transition: opacity 1s ease-in-out;
+            background-size: cover; /* Ensures image covers completely */
+            background-position: center; /* Centers the image perfectly */
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .slide.active {
             opacity: 1;
-            z-index: 2;
+            z-index: 1;
         }
 
-        /* Dark overlay for rich text readability */
-        .slider-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 34, 68, 0.6), rgba(0, 20, 40, 0.7));
-            z-index: 3;
+        .slide-content {
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            transform: translateY(30px);
+            transition: transform 1s ease-in-out;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            color: #ffffff;
-            padding: 0 20px;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
         }
 
-        .slider-overlay h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-            letter-spacing: 0.5px;
+        .slide.active .slide-content {
+            transform: translateY(0);
         }
 
-        .slider-tagline {
-            font-size: 24px;
+        /* ==========================================
+           SVM STYLE TYPOGRAPHY (10x PREMIUM & TAGDI)
+           ========================================== */
+        .svm-line-1 {
+            font-size: 28px;
             font-weight: 700;
-            color: #f59e0b; /* Golden Accent for Tagline */
-            margin-bottom: 15px;
+            letter-spacing: 4px;
+            color: #e2e8f0;
             text-transform: uppercase;
+            margin-bottom: 12px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .svm-line-2 {
+            font-size: 64px;
+            font-family: 'Arial Black', Impact, sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #ffffff;
+            line-height: 1.1;
+            text-shadow: 
+                0px 4px 10px rgba(0,0,0,0.9),
+                0px 0px 20px rgba(255,255,255,0.3);
+            letter-spacing: 2px;
+        }
+
+        .svm-line-3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+            letter-spacing: 1px;
+            max-width: 800px;
+        }
+
+        .svm-line-4-golden {
+            font-size: 40px;
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            font-weight: 900;
+            color: #fbbf24; /* Tagda Golden Color */
+            text-shadow: 
+                2px 2px 0px #78350f, 
+                4px 4px 15px rgba(0,0,0,0.9);
             letter-spacing: 1.5px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            padding: 12px 40px;
+            border-top: 3px solid rgba(251, 191, 36, 0.5);
+            border-bottom: 3px solid rgba(251, 191, 36, 0.5);
+            display: inline-block;
         }
 
-        .slider-overlay p.subtext {
-            font-size: 18px;
-            color: #f8fafc;
-            max-width: 750px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Stylish Nav Buttons (SVM style side arrows) */
-        .slider-btn {
+        /* SLIDER CONTROLS */
+        .slider-controls {
             position: absolute;
             top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.4);
-            color: #ffffff;
-            border: none;
+            z-index: 10;
+        }
+
+        .slider-controls button {
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
             font-size: 24px;
-            padding: 14px 20px;
+            padding: 15px 22px;
             cursor: pointer;
-            z-index: 4;
-            border-radius: 6px;
+            border-radius: 50%;
             transition: all 0.3s ease;
         }
 
-        .slider-btn:hover {
+        .slider-controls button:hover {
             background: #f59e0b;
-            color: #002244;
+            border-color: #f59e0b;
+            transform: scale(1.1);
         }
 
-        .prev-btn { left: 25px; }
-        .next-btn { right: 25px; }
-
-        /* Navigation Dots */
         .slider-dots {
             position: absolute;
-            bottom: 22px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 4;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
         }
 
         .dot {
-            width: 12px;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.4);
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin: 0 6px;
+            background: rgba(255,255,255,0.4);
             border-radius: 50%;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -496,8 +516,8 @@
 
         .dot.active {
             background: #f59e0b;
-            width: 28px;
-            border-radius: 10px;
+            transform: scale(1.4);
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
         }
 
         /* CONTENT CORE GRID SYSTEM */
@@ -529,7 +549,7 @@
             bottom: 0;
             height: 4px;
             width: 60px;
-            background-color: #f59e0b; /* Golden Orange */
+            background-color: #f59e0b;
         }
 
         .intro-text {
@@ -599,9 +619,7 @@
             margin-bottom: 5px;
         }
 
-        /* ==========================================
-           NEW MESSAGES SECTION (PRINCIPAL & MANAGER)
-           ========================================== */
+        /* MESSAGES SECTION */
         .messages-wrapper {
             margin-top: 60px;
             display: flex;
@@ -644,7 +662,7 @@
         }
 
         .msg-body p.quote {
-            font-family: 'Merriweather', serif; /* Professional serif font for reading */
+            font-family: 'Merriweather', serif;
             font-style: italic;
             font-size: 16px;
             color: #334155;
@@ -759,10 +777,7 @@
             padding-top: 10px;
             transition: all 0.6s ease;
         }
-        .bar:hover {
-            transform: translateY(-4px);
-            filter: brightness(1.05);
-        }
+
         .bar-label {
             margin-top: 10px;
             font-size: 14px;
@@ -870,7 +885,7 @@
             font-size: 14px;
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE DESIGN (INCLUDING SVM TYPOGRAPHY MOBILE FIX) */
         @media (max-width: 992px) {
             .main-header-modern { flex-direction: column; text-align: center; gap: 25px; }
             .header-center h1 { font-size: 32px; }
@@ -879,9 +894,10 @@
             .message-card { flex-direction: column; align-items: center; text-align: center; }
             .msg-body { border-left: none; border-top: 4px solid #f59e0b; padding-left: 0; padding-top: 20px; }
             .msg-body p.quote { text-align: center; }
-            .hero-slider-section { height: 360px; }
-            .slider-overlay h2 { font-size: 32px; }
-            .slider-tagline { font-size: 18px; }
+            
+            /* Responsive SVM Text */
+            .svm-line-2 { font-size: 48px; }
+            .svm-line-4-golden { font-size: 32px; }
         }
 
         @media (max-width: 768px) {
@@ -890,15 +906,25 @@
             .main-grid, .data-section, .footer-grid { grid-template-columns: 1fr; }
             .timeline { grid-template-columns: repeat(2, 1fr); }
             .stats-section { flex-direction: column; gap: 30px; }
-            .slider-btn { padding: 10px 14px; font-size: 18px; }
+            
+            /* Hero Slider Responsive */
+            .hero-slider { height: 70vh; min-height: 500px; }
+            .svm-line-1 { font-size: 20px; margin-bottom: 8px; }
+            .svm-line-2 { font-size: 36px; line-height: 1.2; margin-bottom: 15px; }
+            .svm-line-3 { font-size: 16px; margin-bottom: 25px; }
+            .svm-line-4-golden { font-size: 24px; padding: 10px 20px; }
         }
         @media (max-width: 480px) {
             .timeline { grid-template-columns: 1fr; }
             .header-center h1 { font-size: 26px; }
-            .hero-slider-section { height: 300px; }
-            .slider-overlay h2 { font-size: 24px; }
-            .slider-tagline { font-size: 14px; }
-            .slider-overlay p.subtext { font-size: 14px; }
+            
+            /* Mobile Hero Slider Text */
+            .hero-slider { height: 60vh; min-height: 450px; }
+            .svm-line-1 { font-size: 16px; letter-spacing: 2px; }
+            .svm-line-2 { font-size: 28px; }
+            .svm-line-3 { font-size: 14px; }
+            .svm-line-4-golden { font-size: 20px; border-width: 2px; }
+            .slider-controls { display: none; } /* Hide arrows on very small mobile for cleaner look */
         }
     </style>
 </head>
@@ -919,7 +945,7 @@
         
         <div class="main-header-modern">
             <div class="header-logo">
-                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Logo">
+                <img src="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/logo.png" alt="School Logo">
             </div>
             
             <div class="header-center">
@@ -930,7 +956,7 @@
             </div>
             
             <div class="header-founder">
-                <img src="https://i.ibb.co/Y7Zz6Qbm/founder.png" alt="Founder of the College">
+                <img src="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/founder.png" alt="Founder of the College">
                 <div class="founder-name">Late Babu Suryanarayan Singh</div>
             </div>
         </div>
@@ -946,36 +972,34 @@
         </nav>
     </header>
 
-    <section class="hero-slider-section">
-        <div class="slider-wrapper">
-            <div class="slide active" style="background-image: url('https://i.ibb.co/QFrLRQF7/asaldev.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/k2S9f4dz/Screenshot-2026-06-13-205713.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/JwgLr39H/Screenshot-2026-06-13-205758.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/NngKLysQ/Screenshot-2026-06-13-222853.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/N60pH2Fw/Screenshot-2026-06-13-210242.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/ymFXfvjz/Screenshot-2026-06-13-205923.png');"></div>
-            <div class="slide" style="background-image: url('https://i.ibb.co/8D4B6bB4/Screenshot-2026-06-13-210009.png');"></div>
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0, 20, 40, 0.6), rgba(0, 10, 20, 0.8)), url('https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/background.png');">
+            <div class="slide-content">
+                <div class="svm-line-1">SHRI ASAL DEV INTER COLLEGE</div>
+                <div class="svm-line-2">EXCELLENCE IN EDUCATION</div>
+                <div class="svm-line-3">A Senior Secondary Co-Educational School Affiliated to UP Board</div>
+                <div class="svm-line-4-golden">Sheelam Param Bhushanam</div>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: linear-gradient(rgba(0, 20, 40, 0.6), rgba(0, 10, 20, 0.8)), url('https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/background.png');">
+            <div class="slide-content">
+                <div class="svm-line-1">EMPOWERING RURAL INDIA</div>
+                <div class="svm-line-2">NURTURING BRIGHT FUTURES</div>
+                <div class="svm-line-3">Providing high-quality foundational academic configurations in the Amethi region</div>
+                <div class="svm-line-4-golden">Sheelam Param Bhushanam</div>
+            </div>
         </div>
 
-        <div class="slider-overlay">
-            <h2>Welcome to Shri Asal Dev Inter College</h2>
-            <div class="slider-tagline">Sheelam Param Bhushanam</div>
-            <p class="subtext">Providing excellence in high-quality education in rural and semi-urban areas since 1967.</p>
+        <div class="slider-controls">
+            <button class="prev-btn">❮</button>
+            <button class="next-btn">❯</button>
         </div>
-
-        <button class="slider-btn prev-btn">&#10094;</button>
-        <button class="slider-btn next-btn">&#10095;</button>
-
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
         </div>
-    </section>
+    </div>
 
     <main class="container">
         <div class="main-grid">
@@ -1047,7 +1071,7 @@
                     </div>
                 </div>
                 <div class="message-img-container">
-                    <img src="https://i.ibb.co/8L5VkgHB/principal.png" alt="Dr. Lal Singh, Principal">
+                    <img src="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/principal.png" alt="Dr. Lal Singh, Principal">
                 </div>
             </div>
 
@@ -1069,7 +1093,7 @@
                     </div>
                 </div>
                 <div class="message-img-container">
-                    <img src="https://i.ibb.co/j9gcD3J3/manager.png" alt="Ravindra Pratap Singh, Manager">
+                    <img src="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/manager.png" alt="Ravindra Pratap Singh, Manager">
                 </div>
             </div>
 
@@ -1097,35 +1121,23 @@
 
                 <div class="bar-chart">
                     <div class="bar-wrapper">
-                        <div class="bar-container">
-                            <div class="bar" style="height:91%;">86%</div>
-                        </div>
+                        <div class="bar-container"><div class="bar" style="height:91%;">86%</div></div>
                         <div class="bar-label">2022</div>
                     </div>
-
                     <div class="bar-wrapper">
-                        <div class="bar-container">
-                            <div class="bar" style="height:95%;">89%</div>
-                        </div>
+                        <div class="bar-container"><div class="bar" style="height:95%;">89%</div></div>
                         <div class="bar-label">2023</div>
                     </div>
-
                     <div class="bar-wrapper">
-                        <div class="bar-container">
-                            <div class="bar" style="height:98%;">92%</div>
-                        </div>
+                        <div class="bar-container"><div class="bar" style="height:98%;">92%</div></div>
                         <div class="bar-label">2024</div>
                     </div>
-
                     <div class="bar-wrapper">
-                        <div class="bar-container">
-                            <div class="bar" style="height:100%;">94%</div>
-                        </div>
+                        <div class="bar-container"><div class="bar" style="height:100%;">94%</div></div>
                         <div class="bar-label">2025</div>
                     </div>
                 </div>
             </div>
-            
             <div class="table-container">
                 <h3 class="section-title">Admission Quick Guide</h3>
                 <table class="admission-table">
@@ -1176,9 +1188,9 @@
     </footer>
 
     <script>
-        let currentIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
         let slideTimer;
 
         function showSlide(index) {
