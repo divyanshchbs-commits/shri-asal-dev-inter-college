@@ -10,3 +10,166 @@
     <p style="text-align: center; font-size: 18px;">Yeh hamari school ki nayi website hai, jo abhi ban rahi hai!</p>
 </body>
 </html>
+
+<div id="devModalOverlay" class="modal-overlay">
+    <div class="modal-box">
+        
+        <button id="closeModalBtn" class="close-btn">&times;</button>
+
+        <div class="modal-icon">
+            <span>🚧</span>
+        </div>
+
+        <h2 class="modal-heading">Website Under Development</h2>
+
+        <p class="modal-text">
+            Welcome to our official platform. Please be informed that this website is currently under active construction and continuous updates. As we are in the initial phase of uploading official data and refining the interface, the layout and features may appear basic or limited at the moment. We are working hard to deploy the complete digital experience shortly. Thank you for your immense patience and cooperation.
+        </p>
+
+        <div class="modal-divider"></div>
+
+        <div class="modal-formalities">
+            <p class="sign-off">With Warm Regards,</p>
+            <p class="author-name">— Divyansh Pandey</p>
+            <p class="author-role">Website Administrator & Developer</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Full screen dark blurred background */
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent */
+        backdrop-filter: blur(8px); /* Blurs the website behind it */
+        z-index: 99999; /* Keeps it strictly on top of everything */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    /* The White Box */
+    .modal-box {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        width: 90%;
+        max-width: 600px;
+        padding: 40px 30px;
+        border-radius: 16px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        border-top: 6px solid #003366;
+        position: relative;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transform: translateY(0) scale(1);
+        transition: transform 0.4s ease;
+        animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Animation for smooth entry */
+    @keyframes popIn {
+        0% { transform: scale(0.8) translateY(30px); opacity: 0; }
+        100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    /* Close Button Styling */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: #f1f5f9;
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        font-size: 22px;
+        color: #64748b;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    .close-btn:hover {
+        background: #e2e8f0;
+        color: #0f172a;
+        transform: rotate(90deg); /* Cool rotation effect on hover */
+    }
+
+    /* Typography & Layout */
+    .modal-icon {
+        width: 80px;
+        height: 80px;
+        background-color: #fff9db;
+        border: 2px dashed #fcc419;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        font-size: 38px;
+    }
+
+    .modal-heading {
+        color: #003366;
+        font-size: 26px;
+        margin: 0 0 15px 0;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .modal-text {
+        color: #495057;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 25px 0;
+        text-align: center;
+    }
+
+    .modal-divider {
+        height: 2px;
+        width: 100px;
+        background: #c5a059;
+        margin: 0 auto 25px auto;
+    }
+
+    .sign-off { color: #868e96; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 5px 0; }
+    .author-name { color: #003366; font-size: 20px; font-weight: 700; margin: 0 0 2px 0; }
+    .author-role { color: #c5a059; font-size: 13px; font-weight: 600; margin: 0; letter-spacing: 0.5px; }
+
+    /* For Mobile Screens */
+    @media (max-width: 480px) {
+        .modal-box { padding: 30px 20px; }
+        .modal-heading { font-size: 22px; }
+        .modal-text { font-size: 15px; }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modalOverlay = document.getElementById("devModalOverlay");
+        const closeBtn = document.getElementById("closeModalBtn");
+
+        // Lock the website scrolling while the pop-up is open
+        document.body.style.overflow = "hidden";
+
+        // When the user clicks the 'X' button
+        closeBtn.addEventListener("click", function() {
+            // Fade out effect
+            modalOverlay.style.opacity = "0";
+            modalOverlay.style.visibility = "hidden";
+            document.querySelector(".modal-box").style.transform = "scale(0.8)";
+            
+            // Unlock the website scrolling
+            document.body.style.overflow = "auto";
+        });
+    });
+</script>
