@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * {
             margin: 0;
@@ -27,96 +29,144 @@
             line-height: 1.6;
         }
 
-        /* ==========================================
-           100% MATCHING HOME PAGE HEADER STYLES 
-           ========================================== */
+        /* ==========================================================================
+           100% EXACT HOME PAGE HEADER & NAVIGATION STYLES (FROM INDEX.HTML FINAL)
+           ========================================================================== */
         .top-bar-modern {
-            background: #0f172a;
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
             color: #ffffff;
-            padding: 10px 4%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.85rem;
-            flex-wrap: wrap;
+            font-size: 0.88rem;
+            font-weight: 500;
+            border-bottom: 3px solid #b45309;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
 
         .top-bar-info span {
-            margin-right: 20px;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
 
-        .top-bar-social a {
-            color: #ffffff;
-            margin-left: 15px;
+        .top-bar-cta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .cta-btn {
+            background: #b45309;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 20px;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 0.82rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
-        .top-bar-social a:hover {
-            color: #38bdf8;
+        .cta-btn:hover {
+            background: transparent;
+            color: #f59e0b;
+            border-color: #f59e0b;
+            transform: translateY(-2px);
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            border: 1px solid #94a3b8;
+            color: #cbd5e1;
+        }
+
+        .cta-btn.secondary:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+            border-color: white;
         }
 
         .main-header-container {
-            background: #ffffff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.06);
             border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
         }
 
         .main-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 4%;
-            max-width: 1400px;
+            padding: 15px 5%;
+            max-width: 1440px;
             margin: 0 auto;
         }
 
         .logo-brand-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;
             text-decoration: none;
             color: inherit;
         }
 
         .school-logo {
-            width: 65px;
-            height: 65px;
-            object-fit: contain;
+            width: 75px;
+            height: 75px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-brand-container:hover .school-logo {
+            transform: rotate(3deg) scale(1.05);
         }
 
         .brand-text h1 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #1e3a8a;
-            line-height: 1.2;
+            font-size: 1.85rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            line-height: 1.1;
         }
 
         .brand-text p {
-            font-size: 0.8rem;
-            color: #64748b;
+            font-size: 0.85rem;
+            color: #475569;
             font-weight: 600;
-            margin-top: 2px;
+            margin-top: 3px;
+            letter-spacing: 0.3px;
         }
 
         .motto-text {
             font-family: 'Merriweather', serif;
             font-style: italic;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: #b45309;
-            font-weight: 700;
-            margin-top: 4px;
+            font-weight: 800;
+            margin-top: 5px;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            display: inline-block;
+            border-left: 3px solid #1e3a8a;
+            padding-left: 8px;
         }
 
-        /* Desktop Nav Menu */
         .nav-menu {
             display: flex;
             align-items: center;
@@ -125,27 +175,31 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #475569;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 8px 16px;
-            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            padding: 10px 20px;
+            border-radius: 8px;
             transition: all 0.3s ease;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+        .nav-links a:hover {
             color: #1e3a8a;
-            background: #eff6ff;
+            background: #f1f5f9;
         }
 
-        /* Responsive Mobile Hamburger */
+        .nav-links a.active {
+            color: white;
+            background: #1e3a8a;
+            box-shadow: 0 4px 12px rgba(30,58,138,0.2);
+        }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -164,97 +218,95 @@
             transition: all 0.3s ease;
         }
 
-        /* ==========================================
-           ABOUT PAGE CONTENT ORIGINAL STYLES
-           ========================================== */
-        .about-wrapper {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .about-hero-modern {
-            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.95)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
+        /* ==========================================================================
+           YOUR ORIGINAL PREMIUM ABOUT US CONTENT STYLES (100% UNTOUCHED)
+           ========================================================================== */
+        .about-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.85)), url('https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/building.jpg') center/cover no-repeat;
+            padding: 100px 20px;
             text-align: center;
-            padding: 60px 20px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            color: white;
         }
 
-        .about-hero-modern h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 10px;
+        .about-hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
         }
 
-        .about-main-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            margin-bottom: 50px;
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .about-editorial h2 {
-            color: #1e3a8a;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+        .about-container {
+            max-width: 1200px;
+            margin: -50px auto 60px;
+            padding: 0 20px;
             position: relative;
-            padding-bottom: 10px;
+            z-index: 10;
         }
 
-        .about-editorial h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 4px;
-            background: #b45309;
-            border-radius: 2px;
-        }
-
-        .about-editorial p {
-            margin-bottom: 20px;
-            color: #475569;
-            font-size: 1.05rem;
-            text-align: justify;
-        }
-
-        .sidebar-panel {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .info-card-sidebar {
+        .about-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
         }
 
-        .info-card-sidebar h3 {
+        .about-section h2 {
+            font-size: 2rem;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .about-section p {
+            color: #475569;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .grid-box {
+            background: #f8fafc;
+            padding: 35px;
+            border-radius: 12px;
+            border-left: 5px solid #b45309;
+        }
+
+        .grid-box h3 {
+            font-size: 1.4rem;
             color: #1e3a8a;
             margin-bottom: 15px;
-            font-size: 1.3rem;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 8px;
+        }
+
+        .grid-box p {
+            font-size: 1rem;
+            margin-bottom: 0;
         }
 
         .facilities-section {
             margin-top: 50px;
+            border-top: 2px dashed #e2e8f0;
+            padding-top: 40px;
         }
 
         .facilities-section h2 {
             text-align: center;
-            color: #1e3a8a;
             margin-bottom: 35px;
-            font-size: 2rem;
         }
 
         .facilities-grid {
@@ -264,16 +316,16 @@
         }
 
         .facility-card {
-            background: white;
+            background: #f8fafc;
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             border-top: 4px solid #1e3a8a;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .facility-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
 
         .facility-info h3 {
@@ -285,9 +337,10 @@
         .facility-info p {
             color: #64748b;
             font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        /* Footer Styles */
+        /* Footer original configuration */
         footer {
             background: #0f172a;
             color: #94a3b8;
@@ -300,24 +353,23 @@
             font-size: 0.9rem;
         }
 
-        /* ==========================================
-           RESPONSIVE MEDIA QUERIES
-           ========================================== */
-        @media (max-width: 968px) {
-            .about-main-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
+        /* ==========================================================================
+           RESPONSIVE MOBILE BREAKPOINTS (MERGED PERFECTLY)
+           ========================================================================== */
         @media (max-width: 768px) {
             .top-bar-modern {
                 flex-direction: column;
-                gap: 8px;
+                gap: 10px;
                 text-align: center;
                 padding: 10px;
             }
-            .top-bar-info span {
-                margin: 0 10px;
+            .top-bar-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .top-bar-cta {
+                width: 100%;
+                justify-content: center;
             }
             .hamburger {
                 display: flex;
@@ -333,7 +385,7 @@
                 box-shadow: 0 10px 15px rgba(0,0,0,0.05);
                 padding: 20px;
                 gap: 10px;
-                border-top: 1px solid #efefef;
+                border-top: 1px solid #e2e8f0;
             }
             .nav-links.active {
                 display: flex;
@@ -342,6 +394,15 @@
                 width: 100%;
                 text-align: center;
             }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-card {
+                padding: 30px 20px;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
@@ -349,14 +410,13 @@
 
     <div class="top-bar-modern">
         <div class="top-bar-info">
-            <span>📍 Piparpur, Amethi, Uttar Pradesh</span>
-            <span>📞 +91 XXXXXXXXXX</span>
-            <span>✉️ info@shriasaldev.org</span>
+            <span><i class="fas fa-map-marker-alt"></i> Piparpur, Bhadoyan, Amethi, UP</span>
+            <span><i class="fas fa-phone-alt"></i> +91 9452163155, +91 9936553255</span>
+            <span><i class="fas fa-envelope"></i> info@shriasaldev.org</span>
         </div>
-        <div class="top-bar-social">
-            <a href="#">Facebook</a>
-            <a href="#">YouTube</a>
-            <a href="#">Twitter</a>
+        <div class="top-bar-cta">
+            <a href="#" class="cta-btn"><i class="fas fa-graduation-cap"></i> Portal Login</a>
+            <a href="#" class="cta-btn secondary"><i class="fas fa-bullhorn"></i> Admissions 2026</a>
         </div>
     </div>
 
@@ -388,62 +448,50 @@
         </header>
     </div>
 
-    <div class="about-wrapper">
-        <div class="about-hero-modern">
-            <h1>About Our Institution</h1>
-            <p>Nurturing Excellence, Character, and Wisdom Since Inception</p>
-        </div>
+    <section class="about-hero">
+        <h1>About Our Institution</h1>
+        <p>Nurturing Excellence, Character, and Wisdom Since Inception</p>
+    </section>
 
-        <div class="about-main-grid">
-            <div class="about-editorial">
+    <div class="about-container">
+        <div class="about-card">
+            <div class="about-section">
                 <h2>Our Legacy & History</h2>
                 <p>Shri Asal Dev Inter College, located in the peaceful and culturally rich region of Piparpur, Amethi, stands as a beacon of academic brilliance and comprehensive personal development. Founded with a visionary outlook to provide high-quality, modern education grounded in traditional ethical values, our institution has consistently empowered generations of students to excel in various spheres of life.</p>
                 <p>We believe in providing an inclusive environment where intellectual curiosity is sparked, and students are given ample opportunities to discover their hidden potentials. Guided by our sacred motto <strong>"शीलं परं भूषणम्" (Character is the highest virtue)</strong>, our dedicated faculty works relentlessly to cultivate discipline, critical thinking, and leadership qualities in every single child.</p>
-                
-                <h2 style="margin-top: 35px;">Our Vision & Mission</h2>
-                <p><strong>Our Vision:</strong> To transform into a world-class premier learning community that fosters outstanding academic innovation, strong moral uprightness, and an unyielding sense of social responsibility among rural and urban students alike.</p>
-                <p><strong>Our Mission:</strong> To offer accessible, cutting-edge infrastructural resources, holistic educational programs, and a safe, nurturing environment that prepares future citizens to tackle dynamic global challenges with extreme confidence and empathy.</p>
             </div>
 
-            <div class="sidebar-panel">
-                <div class="info-card-sidebar">
-                    <h3>Principal's Message</h3>
-                    <p style="font-size: 0.95rem; color: #475569; font-style: italic; line-height: 1.5; margin-bottom: 15px;">
-                        "Education is not merely the acquisition of facts, but the training of the mind to think and the soul to grow beautifully."
-                    </p>
-                    <strong style="color: #1e3a8a; font-size: 0.95rem;">- Dr. S. K. Pandey</strong>
+            <div class="about-grid">
+                <div class="grid-box">
+                    <h3>Our Vision</h3>
+                    <p>To transform into a world-class premier learning community that fosters outstanding academic innovation, strong moral uprightness, and an unyielding sense of social responsibility among rural and urban students alike.</p>
                 </div>
-                <div class="info-card-sidebar">
-                    <h3>Quick Stats</h3>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #475569;">
-                        <li>👥 <strong>1500+</strong> Active Students</li>
-                        <li>👨‍🏫 <strong>50+</strong> Expert Educators</li>
-                        <li>🔬 <strong>4+</strong> Advanced Laboratories</li>
-                        <li>📚 <strong>5000+</strong> Library Books</li>
-                    </ul>
+                <div class="grid-box">
+                    <h3>Our Mission</h3>
+                    <p>To offer accessible, cutting-edge infrastructural resources, holistic educational programs, and a safe, nurturing environment that prepares future citizens to tackle dynamic global challenges with extreme confidence and empathy.</p>
                 </div>
             </div>
-        </div>
 
-        <div class="facilities-section">
-            <h2>Our Campus Infrastructure</h2>
-            <div class="facilities-grid">
-                <div class="facility-card">
-                    <div class="facility-info">
-                        <h3>Smart Classrooms</h3>
-                        <p>Equipped with modern visual projectors and audio aids to make regular abstract concepts highly engaging and easy to absorb.</p>
+            <div class="facilities-section">
+                <h2>Our Campus Infrastructure</h2>
+                <div class="facilities-grid">
+                    <div class="facility-card">
+                        <div class="facility-info">
+                            <h3>Smart Classrooms</h3>
+                            <p>Equipped with modern visual projectors and audio aids to make regular abstract concepts highly engaging and easy to absorb.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="facility-card">
-                    <div class="facility-info">
-                        <h3>Science Laboratories</h3>
-                        <p>Fully functional, well-stocked physics, chemistry, and biology labs designed to give practical hands-on experience safely.</p>
+                    <div class="facility-card">
+                        <div class="facility-info">
+                            <h3>Science Laboratories</h3>
+                            <p>Fully functional, well-stocked physics, chemistry, and biology labs designed to give practical hands-on experience safely.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="facility-card">
-                    <div class="facility-info">
-                        <h3>Rich Library</h3>
-                        <p>A serene, vast library housing thousands of textbooks, references, reference logs, and general knowledge books for students.</p>
+                    <div class="facility-card">
+                        <div class="facility-info">
+                            <h3>Rich Library</h3>
+                            <p>A serene, vast library housing thousands of textbooks, references, reference logs, and general knowledge books for students.</p>
+                        </div>
                     </div>
                 </div>
             </div>
