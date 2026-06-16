@@ -419,35 +419,48 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start; /* Ye text ko left me layega */
+            text-align: left; /* Left alignment */
+            padding: 0 8%; /* Left side se jagah chhodne ke liye */
             color: #ffffff;
-            padding: 0 20px;
         }
 
-        .slider-overlay h2 {
-            font-size: 42px;
+        /* Naya Welcome Badge (SVM ke orange pill ki tarah) */
+        .welcome-badge {
+            background-color: #fca5a5; /* Thoda light orange jaisa */
+            background: #f59e0b; /* Golden Orange */
+            color: #000;
+            font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-            letter-spacing: 0.5px;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
-        .slider-tagline {
-            font-size: 24px;
+        /* Bada School Name (SVM ki tarah Serif font me) */
+        .slider-overlay h2.huge-title {
+            font-family: 'Merriweather', serif; /* Official look ke liye */
+            font-size: 65px; /* Huge Size */
+            line-height: 1.15;
             font-weight: 700;
-            color: #f59e0b; /* Golden Accent for Tagline */
             margin-bottom: 15px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            letter-spacing: 0px;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
 
-        .slider-overlay p.subtext {
-            font-size: 18px;
-            color: #f8fafc;
-            max-width: 750px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        /* Chhota Golden Motto */
+        .slider-tagline {
+            font-family: 'Merriweather', serif;
+            font-style: italic; /* Tircha SVM ki tarah */
+            font-size: 22px;
+            font-weight: 600;
+            color: #f59e0b; /* Golden color */
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
         }
 
         /* Stylish Nav Buttons (SVM style side arrows) */
@@ -880,26 +893,30 @@
             .msg-body { border-left: none; border-top: 4px solid #f59e0b; padding-left: 0; padding-top: 20px; }
             .msg-body p.quote { text-align: center; }
             .hero-slider-section { height: 360px; }
-            .slider-overlay h2 { font-size: 32px; }
+            .slider-overlay h2.huge-title { font-size: 45px; }
             .slider-tagline { font-size: 18px; }
         }
 
         @media (max-width: 768px) {
-            .top-bar-modern { flex-direction: column; gap: 12px; text-align: center; }
-            .top-contact { justify-content: center; gap: 10px; }
-            .main-grid, .data-section, .footer-grid { grid-template-columns: 1fr; }
-            .timeline { grid-template-columns: repeat(2, 1fr); }
-            .stats-section { flex-direction: column; gap: 30px; }
-            .slider-btn { padding: 10px 14px; font-size: 18px; }
-        }
+    .top-bar-modern { flex-direction: column; gap: 12px; text-align: center; }
+    .top-contact { justify-content: center; gap: 10px; }
+    .main-grid, .data-section, .footer-grid { grid-template-columns: 1fr; }
+    .timeline { grid-template-columns: repeat(2, 1fr); }
+    .stats-section { flex-direction: column; gap: 30px; }
+    .slider-btn { padding: 10px 14px; font-size: 18px; }
+    .slider-overlay h2.huge-title { font-size: 36px; } 
+    .slider-tagline { font-size: 16px; }
+}
         @media (max-width: 480px) {
             .timeline { grid-template-columns: 1fr; }
             .header-center h1 { font-size: 26px; }
             .hero-slider-section { height: 300px; }
-            .slider-overlay h2 { font-size: 24px; }
+            .slider-overlay { padding: 0 5%; } /* YAHAN PADDING 8% SE KAM KARKE 5% KI HAI */
+            .slider-overlay h2.huge-title { font-size: 26px; } /* h2 ko h2.huge-title kiya */
             .slider-tagline { font-size: 14px; }
-            .slider-overlay p.subtext { font-size: 14px; }
+            /* p.subtext ko hata diya kyunki wo ab html me nahi hai */
         }
+
     </style>
 </head>
 <body>
@@ -958,9 +975,9 @@
         </div>
 
         <div class="slider-overlay">
-            <h2>Welcome to Shri Asal Dev Inter College</h2>
-            <div class="slider-tagline">Sheelam Param Bhushanam</div>
-            <p class="subtext">Providing excellence in high-quality education in rural and semi-urban areas since 1967.</p>
+            <div class="welcome-badge">Welcome to</div>
+            <h2 class="huge-title">SHRI ASAL DEV <br> INTER COLLEGE <br> PIPARPUR</h2>
+            <div class="slider-tagline">"Sheelam Param Bhushanam"</div>
         </div>
 
         <button class="slider-btn prev-btn">&#10094;</button>
