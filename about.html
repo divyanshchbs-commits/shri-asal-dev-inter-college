@@ -6,18 +6,11 @@
     <title>About Us - Shri Asal Dev Inter College</title>
     
     <link rel="icon" type="image/png" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
-    <link rel="shortcut icon" type="image/x-icon" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
-    <link rel="apple-touch-icon" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ==========================================================================
-           1. CORE & HEADER STYLES (100% EXACTLY COPIED FROM INDEX.HTML FINAL)
-           ========================================================================== */
         * {
             margin: 0;
             padding: 0;
@@ -31,518 +24,427 @@
             line-height: 1.6;
         }
 
-        /* Top Bar Modern */
+        /* Top Bar & Header Styles (Matching Home Page) */
         .top-bar-modern {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: #f1f5f9;
-            padding: 10px 5%;
+            background: #001428;
+            color: #ffffff;
+            padding: 10px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.85rem;
-            border-bottom: 2px solid #e2e8f0;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-        .top-bar-info {
+
+        .top-contact {
             display: flex;
             gap: 20px;
         }
-        .top-bar-info span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .top-bar-info i {
-            color: #38bdf8;
-        }
-        .top-bar-socials {
-            display: flex;
-            gap: 15px;
-        }
-        .top-bar-socials a {
-            color: #cbd5e1;
-            transition: color 0.3s;
-        }
-        .top-bar-socials a:hover {
-            color: #38bdf8;
-        }
 
-        /* Main Header Modern */
         .main-header-modern {
-            background: white;
-            padding: 15px 5%;
+            background: #ffffff;
+            padding: 15px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid #0f172a;
-        }
-        .header-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .header-logo {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
-        }
-        .header-title-block h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.75rem;
-            color: #0f172a;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .header-title-block p {
-            font-size: 0.9rem;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 2px;
-        }
-        .header-meta-modern {
-            display: flex;
-            gap: 30px;
-            font-size: 0.85rem;
-        }
-        .meta-item-modern {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        .meta-label {
-            color: #64748b;
-            font-weight: 600;
-        }
-        .meta-value {
-            color: #0f172a;
-            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
         }
 
-        /* Navigation Modern */
-        .nav-modern {
-            background: #0f172a;
-            padding: 0 5%;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-        }
-        .nav-container-modern {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-menu-modern {
-            display: flex;
-            list-style: none;
-        }
-        .nav-item-modern {
-            position: relative;
-        }
-        .nav-link-modern {
-            display: block;
-            padding: 18px 20px;
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            transition: all 0.3s;
-        }
-        .nav-link-modern:hover, .nav-item-modern.active .nav-link-modern {
-            color: white;
-            background: #1e293b;
-        }
-        /* Dropdown Modern */
-        .dropdown-modern {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            min-width: 200px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            display: none;
-            list-style: none;
-            border-top: 3px solid #38bdf8;
-        }
-        .dropdown-modern li a {
-            display: block;
-            padding: 12px 20px;
-            color: #334155;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .dropdown-modern li a:hover {
-            background: #f1f5f9;
-            color: #0f172a;
-            padding-left: 25px;
-        }
-        .nav-item-modern:hover .dropdown-modern {
-            display: block;
-        }
-        .menu-toggle-modern {
-            display: none;
-            color: white;
-            font-size: 1.5rem;
+        .header-logo img {
+            height: 70px;
             cursor: pointer;
         }
 
-        /* Responsive Breakpoints for Header */
-        @media (max-width: 1024px) {
-            .header-title-block h1 { font-size: 1.4rem; }
-            .header-meta-modern { display: none; }
-        }
-        @media (max-width: 768px) {
-            .top-bar-modern { flex-direction: column; gap: 8px; text-align: center; }
-            .main-header-modern { flex-direction: column; text-align: center; gap: 15px; }
-            .header-brand { flex-direction: column; }
-            .menu-toggle-modern { display: block; padding: 15px 0; }
-            .nav-menu-modern {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background: #0f172a;
-            }
-            .nav-menu-modern.active { display: flex; }
-            .nav-link-modern { padding: 15px 20px; border-bottom: 1px solid #1e293b; }
-            .dropdown-modern { position: static; background: #1e293b; box-shadow: none; border-top: none; }
-            .dropdown-modern li a { color: #cbd5e1; padding-left: 35px; }
-            .dropdown-modern li a:hover { background: #334155; color: white; }
+        /* Navigation Menu */
+        .nav-container-modern {
+            background: #002244;
+            padding: 0 8%;
+            position: sticky;
+            top: 0;
+            z-index: 999;
         }
 
-        /* ==========================================================================
-           2. ABOUT US SPECIFIC STYLES (100% UNCHANGED FROM ORIGINAL ABOUT.HTML CODE)
-           ========================================================================== */
-        /* Hero Section */
-        .about-hero-modern {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
+        .nav-links-modern {
+            display: flex;
+            list-style: none;
+            gap: 5px;
         }
-        .about-hero-modern h2 {
+
+        .nav-links-modern li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 20px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .nav-links-modern li a:hover,
+        .nav-links-modern li a.active {
+            background: #f59e0b;
+            color: #001428;
+        }
+
+        /* Grand About Hero Banner (SVM Style Alignment) */
+        .about-hero {
+            position: relative;
+            height: 350px;
+            background: url('https://i.ibb.co/rGGwcRD8/logo.png') no-repeat center center/cover;
+            background-color: #001428;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+        }
+
+        .about-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 34, 68, 0.75), rgba(0, 20, 40, 0.85));
+            z-index: 1;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .about-badge {
+            background: #f59e0b;
+            color: #000;
+            font-weight: 800;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .about-hero h1 {
             font-family: 'Merriweather', serif;
-            font-size: 2.5rem;
+            font-size: 48px;
             font-weight: 700;
+            text-transform: uppercase;
             margin-bottom: 10px;
         }
-        .about-hero-modern p {
-            font-size: 1.1rem;
-            color: #94a3b8;
+
+        .about-hero p {
+            font-size: 16px;
+            color: #cbd5e1;
             max-width: 600px;
+        }
+
+        /* Main Content Container */
+        .about-container {
+            padding: 60px 8%;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* Content Container */
-        .about-content-wrapper {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 5%;
-        }
-
-        .about-grid-modern {
+        /* History & Intro Section */
+        .history-section {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            align-items: start;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
         }
 
-        .main-about-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
-            border: 1px solid #e2e8f0;
-        }
-        .main-about-card h2 {
+        .history-text h2 {
             font-family: 'Merriweather', serif;
-            color: #0f172a;
-            font-size: 1.8rem;
+            color: #002244;
+            font-size: 32px;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
-        .main-about-card h2::after {
+
+        .history-text h2::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 60px;
             height: 4px;
-            background: #38bdf8;
-            border-radius: 2px;
+            background: #f59e0b;
         }
-        .main-about-card p {
+
+        .history-text p {
+            margin-bottom: 15px;
+            font-size: 15px;
             color: #475569;
-            margin-bottom: 20px;
             text-align: justify;
         }
 
-        /* Vision Mission Grid */
-        .vm-container-modern {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .vm-box-modern {
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 8px;
-            border-top: 4px solid #0f172a;
-        }
-        .vm-box-modern h3 {
-            color: #0f172a;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .vm-box-modern i {
-            color: #38bdf8;
-        }
-        .vm-box-modern p {
-            font-size: 0.95rem;
-            color: #475569;
-            margin-bottom: 0;
-        }
-
-        /* Values Sidebar */
-        .values-sidebar-modern {
-            background: white;
-            padding: 30px;
+        .history-image-box {
+            background: #ffffff;
+            padding: 15px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid #e2e8f0;
         }
-        .values-sidebar-modern h2 {
-            font-family: 'Merriweather', serif;
-            color: #0f172a;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-        }
-        .value-card-modern {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-        .value-card-modern:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        .value-icon-modern {
-            background: #f1f5f9;
-            color: #0f172a;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        .value-info-modern h4 {
-            color: #0f172a;
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-        .value-info-modern p {
-            font-size: 0.85rem;
-            color: #64748b;
+
+        .history-image-box img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
         }
 
-        /* Campus Facilities */
-        .facilities-section {
-            margin-top: 50px;
+        /* Vision & Mission Cards */
+        .vision-mission-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
         }
+
+        .vm-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border-top: 5px solid #002244;
+            transition: transform 0.3s ease;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .vm-card.mission {
+            border-top-color: #f59e0b;
+        }
+
+        .vm-card h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            color: #002244;
+            margin-bottom: 15px;
+        }
+
+        .vm-card p {
+            font-size: 15px;
+            color: #475569;
+        }
+
+        /* Core Values Row */
+        .values-section {
+            background: #002244;
+            color: #ffffff;
+            padding: 5px 40px 40px 40px;
+            border-radius: 16px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,34,68,0.15);
+        }
+
+        .values-title {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+
+        .values-title h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            color: #f59e0b;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .value-item h4 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .value-item p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* Infrastructure / Facilities Section */
         .facilities-section h2 {
             font-family: 'Merriweather', serif;
             text-align: center;
-            color: #0f172a;
-            font-size: 1.8rem;
-            margin-bottom: 35px;
+            color: #002244;
+            font-size: 32px;
+            margin-bottom: 40px;
         }
+
         .facilities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
+
         .facility-card {
-            background: white;
-            border-radius: 10px;
+            background: #ffffff;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
             border: 1px solid #e2e8f0;
-            transition: transform 0.3s;
         }
-        .facility-card:hover {
-            transform: translateY(-5px);
-        }
+
         .facility-info {
             padding: 25px;
         }
+
         .facility-info h3 {
-            color: #0f172a;
-            font-size: 1.25rem;
+            font-size: 18px;
+            color: #002244;
             margin-bottom: 10px;
         }
+
         .facility-info p {
-            color: #475569;
-            font-size: 0.9rem;
+            font-size: 14px;
+            color: #64748b;
         }
 
-        /* Footer */
+        /* Footer Section (Matching Home Page) */
         footer {
-            background: #0f172a;
+            background: #001428;
             color: #94a3b8;
-            padding: 20px 0;
-            margin-top: 60px;
-            border-top: 4px solid #1e293b;
+            padding: 40px 8% 20px 8%;
+            font-size: 14px;
+            border-top: 5px solid #f59e0b;
         }
+
         .footer-bottom {
             text-align: center;
-            font-size: 0.9rem;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 13px;
         }
 
+        /* RESPONSIVE DESIGN */
         @media (max-width: 992px) {
-            .about-grid-modern { grid-template-columns: 1fr; }
+            .history-section { grid-template-columns: 1fr; }
+            .facilities-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-modern { flex-direction: column; gap: 10px; text-align: center; }
+            .vision-mission-section { grid-template-columns: 1fr; }
+            .about-hero h1 { font-size: 36px; }
+        }
+
+        @media (max-width: 480px) {
+            .facilities-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .about-hero { height: 280px; padding: 0 5%; }
+            .about-hero h1 { font-size: 28px; }
+            .about-container { padding: 40px 5%; }
         }
     </style>
 </head>
 <body>
 
     <div class="top-bar-modern">
-        <div class="top-bar-info">
-            <span><i class="fas fa-phone-alt"></i> +91-XXXXXXXXXX</span>
-            <span><i class="fas fa-envelope"></i> info@sadintercollege.org</span>
+        <div class="top-contact">
+            <span>📞 +91 XXXXXXXXXX</span>
+            <span>📧 info@shriasaldevedu.org</span>
         </div>
-        <div class="top-bar-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="top-location">DISE Code: XXXXXXXXXXX | Piparpur, Amethi</div>
+    </div>
+
+    <div class="main-header-modern">
+        <div class="header-logo">
+            <a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">
+                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Logo">
+            </a>
         </div>
     </div>
 
-    <header class="main-header-modern">
-        <div class="header-brand">
-            <img src="logo.png" alt="School Logo" class="header-logo">
-            <div class="header-title-block">
-                <h1>Shri Asal Dev Inter College</h1>
-                <p>Piparpur, Amethi, Uttar Pradesh</p>
-            </div>
-        </div>
-        <div class="header-meta-modern">
-            <div class="meta-item-modern">
-                <span class="meta-label">DISE Code</span>
-                <span class="meta-value">0937XXXXXXXX</span>
-            </div>
-            <div class="meta-item-modern">
-                <span class="meta-label">UP Board Code</span>
-                <span class="meta-value">XXXX</span>
-            </div>
-            <div class="meta-item-modern">
-                <span class="meta-label">Est. Year</span>
-                <span class="meta-value">1967</span>
-            </div>
-        </div>
-    </header>
+    <div class="nav-container-modern">
+        <ul class="nav-links-modern">
+            <li><a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="#">Admission</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
 
-    <nav class="nav-modern">
-        <div class="nav-container-modern">
-            <div class="menu-toggle-modern" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu-modern" id="navMenu">
-                <li class="nav-item-modern"><a href="index.html" class="nav-link-modern">Home</a></li>
-                <li class="nav-item-modern active"><a href="about.html" class="nav-link-modern">About Us</a></li>
-                <li class="nav-item-modern"><a href="#" class="nav-link-modern">Admissions <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
-                    <ul class="dropdown-modern">
-                        <li><a href="#">Admission Guide</a></li>
-                        <li><a href="#">Fee Structure</a></li>
-                        <li><a href="#">Online Registration</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item-modern"><a href="#" class="nav-link-modern">Academics <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 3px;"></i></a>
-                    <ul class="dropdown-modern">
-                        <li><a href="#">Courses Offered</a></li>
-                        <li><a href="#">School Rules</a></li>
-                        <li><a href="#">Academic Calendar</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item-modern"><a href="#" class="nav-link-modern">Gallery</a></li>
-                <li class="nav-item-modern"><a href="#" class="nav-link-modern">Contact Us</a></li>
-            </ul>
+    <div class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+            <span class="about-badge">Know Our Legacy</span>
+            <h1>About Our Institution</h1>
+            <p>Shaping young minds and fostering academic excellence since 1967 in rural and semi-urban landscapes.</p>
         </div>
-    </nav>
+    </div>
 
-    <section class="about-hero-modern">
-        <h2>About Our Institution</h2>
-        <p>Nurturing minds, building character, and achieving excellence since 1967.</p>
-    </section>
-
-    <div class="about-content-wrapper">
-        <div class="about-grid-modern">
-            
-            <div class="main-about-card">
+    <div class="about-container">
+        
+        <div class="history-section">
+            <div class="history-text">
                 <h2>Our Rich History & Heritage</h2>
-                <p>Shri Asal Dev Inter College was founded in the year 1967 with a distinct vision to provide high-quality education to the rural youths of Piparpur, Amethi, and its neighboring regions. Named after the revered local inspiration, the college has steadily grown from a humble academic setup into a premier educational center of the district.</p>
-                <p>Over the past 59+ years, the institution has consistently maintained exceptional standards, helping thousands of students excel in board examinations, higher university studies, and various distinguished professional careers across India.</p>
-                
-                <div class="vm-container-modern">
-                    <div class="vm-box-modern">
-                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                        <p>To emerge as a benchmark institution that blends traditional moral values with modern scientific education, enabling every child to discover and fulfill their true potential.</p>
-                    </div>
-                    <div class="vm-box-modern">
-                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                        <p>To provide accessible, affordable, and holistic education. We focus on intellectual discipline, spiritual development, and physical fitness to prepare responsible citizens of tomorrow.</p>
-                    </div>
-                </div>
+                <p>Shri Asal Dev Inter College, situated in Piparpur, Amethi, was established in 1967 with a vision to provide high-quality education to students in rural and semi-urban areas. Named after the revered Shri Asal Dev Ji, the institution has stood as a beacon of knowledge and moral character for generations.</p>
+                <p>From its humble beginnings with just a few classrooms, the college has transformed into a premier inter college, offering comprehensive educational programs in Science, Arts, and Commerce streams under the curriculum guidelines of the state board.</p>
+                <p>Over the past five decades, our alumni have gone on to excel in various professional domains including civil services, medicine, engineering, and defense, keeping the school motto "Sheelam Param Bhushanam" close to their hearts.</p>
             </div>
+            <div class="history-image-box">
+                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Campus View" style="max-height: 300px; object-fit: contain; margin: 0 auto;">
+            </div>
+        </div>
 
-            <div class="values-sidebar-modern">
+        <div class="vision-mission-section">
+            <div class="vm-card">
+                <h3>Our Vision</h3>
+                <p>To be an educational institution of excellence that nurtures young individuals into intellectually competent, morally upright, and socially responsible citizens who can positively contribute to the growth of our nation.</p>
+            </div>
+            <div class="vm-card mission">
+                <h3>Our Mission</h3>
+                <p>To provide accessible, affordable, and high-quality modern education embedded with rich traditional values. We aim to create an inclusive learning ecosystem that fosters critical thinking, creativity, and robust physical development.</p>
+            </div>
+        </div>
+
+        <div class="values-section">
+            <div class="values-title">
                 <h2>Our Core Values</h2>
-                
-                <div class="value-card-modern">
-                    <div class="value-icon-modern"><i class="fas fa-star"></i></div>
-                    <div class="value-info-modern">
-                        <h4>Excellence</h4>
-                        <p>Striving for the highest quality in academics, co-curricular skills, and institutional growth benchmarks.</p>
-                    </div>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <h4>Character (Sheelam)</h4>
+                    <p>We place highest emphasis on integrity, modesty, and good behavior as true ornaments of education.</p>
                 </div>
-
-                <div class="value-card-modern">
-                    <div class="value-icon-modern"><i class="fas fa-shield-alt"></i></div>
-                    <div class="value-info-modern">
-                        <h4>Character (Sheelam)</h4>
-                        <p>Upholding deep moral ethics, honesty, personal integrity, and profound respect for societal elders.</p>
-                    </div>
+                <div class="value-item">
+                    <h4>Excellence</h4>
+                    <p>Striving continuously to raise the bar in academics, sports, and co-curricular domains.</p>
                 </div>
-
-                <div class="value-card-modern">
-                    <div class="value-icon-modern"><i class="fas fa-users"></i></div>
-                    <div class="value-info-modern">
-                        <h4>Inclusivity</h4>
-                        <p>Providing equal, fair development opportunities to every single student without any social or economic bias.</p>
-                    </div>
+                <div class="value-item">
+                    <h4>Inclusivity</h4>
+                    <p>Ensuring that every child, regardless of socio-economic background, receives equal opportunities.</p>
                 </div>
-
-                <div class="value-card-modern">
-                    <div class="value-icon-modern"><i class="fas fa-gavel"></i></div>
-                    <div class="value-info-modern">
-                        <h4>Discipline</h4>
-                        <p>Inculcating perfect punctuality, mutual respect, self-control, and an orderly behavior pattern in school life.</p>
-                    </div>
+                <div class="value-item">
+                    <h4>Discipline</h4>
+                    <p>Fostering self-regulation and dedication that helps students navigate challenges in adult life.</p>
                 </div>
             </div>
-
         </div>
 
         <div class="facilities-section">
@@ -577,13 +479,5 @@
         </div>
     </footer>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
