@@ -6,6 +6,9 @@
     <title>About Us - Shri Asal Dev Inter College</title>
     
     <link rel="icon" type="image/png" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
+    <link rel="shortcut icon" type="image/x-icon" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
+    <link rel="apple-touch-icon" href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -24,425 +27,400 @@
             line-height: 1.6;
         }
 
-        /* Top Bar & Header Styles (Matching Home Page) */
+        /* ==========================================
+           100% MATCHING HOME PAGE HEADER STYLES 
+           ========================================== */
         .top-bar-modern {
-            background: #001428;
+            background: #0f172a;
             color: #ffffff;
-            padding: 10px 8%;
+            padding: 10px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
         }
 
-        .top-contact {
-            display: flex;
-            gap: 20px;
-        }
-
-        .main-header-modern {
-            background: #ffffff;
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
+        .top-bar-info span {
+            margin-right: 20px;
+            display: inline-flex;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            position: relative;
-            z-index: 10;
-        }
-
-        .header-logo img {
-            height: 70px;
-            cursor: pointer;
-        }
-
-        /* Navigation Menu */
-        .nav-container-modern {
-            background: #002244;
-            padding: 0 8%;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .nav-links-modern {
-            display: flex;
-            list-style: none;
             gap: 5px;
         }
 
-        .nav-links-modern li a {
+        .top-bar-social a {
             color: #ffffff;
+            margin-left: 15px;
             text-decoration: none;
-            padding: 16px 20px;
-            display: inline-block;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
+            transition: color 0.3s;
         }
 
-        .nav-links-modern li a:hover,
-        .nav-links-modern li a.active {
-            background: #f59e0b;
-            color: #001428;
+        .top-bar-social a:hover {
+            color: #38bdf8;
         }
 
-        /* Grand About Hero Banner (SVM Style Alignment) */
-        .about-hero {
-            position: relative;
-            height: 350px;
-            background: url('https://i.ibb.co/rGGwcRD8/logo.png') no-repeat center center/cover; /* Replace with campus image later */
-            background-color: #001428;
-            display: flex;
-            align-items: center;
-            padding: 0 8%;
-        }
-
-        .about-hero-overlay {
-            position: absolute;
+        .main-header-container {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 34, 68, 0.75), rgba(0, 20, 40, 0.85));
-            z-index: 1;
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .about-hero-content {
-            position: relative;
-            z-index: 2;
-            color: #ffffff;
-            text-align: left;
-        }
-
-        .about-badge {
-            background: #f59e0b;
-            color: #000;
-            font-weight: 800;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            text-transform: uppercase;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .about-hero h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 48px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .about-hero p {
-            font-size: 16px;
-            color: #cbd5e1;
-            max-width: 600px;
-        }
-
-        /* Main Content Container */
-        .about-container {
-            padding: 60px 8%;
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 4%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* History & Intro Section */
-        .history-section {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
+        .logo-brand-container {
+            display: flex;
             align-items: center;
-            margin-bottom: 60px;
+            gap: 15px;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .history-text h2 {
+        .school-logo {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .brand-text h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text p {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .motto-text {
             font-family: 'Merriweather', serif;
-            color: #002244;
-            font-size: 32px;
+            font-style: italic;
+            font-size: 0.85rem;
+            color: #b45309;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        /* Desktop Nav Menu */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #1e3a8a;
+            background: #eff6ff;
+        }
+
+        /* Responsive Mobile Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #1e3a8a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* ==========================================
+           ABOUT PAGE CONTENT ORIGINAL STYLES
+           ========================================== */
+        .about-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .about-hero-modern {
+            background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.95)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .about-hero-modern h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .about-main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .about-editorial h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
         }
 
-        .history-text h2::after {
+        .about-editorial h2::after {
             content: '';
             position: absolute;
-            bottom: 0;
             left: 0;
-            width: 60px;
+            bottom: 0;
+            width: 50px;
             height: 4px;
-            background: #f59e0b;
+            background: #b45309;
+            border-radius: 2px;
         }
 
-        .history-text p {
-            margin-bottom: 15px;
-            font-size: 15px;
+        .about-editorial p {
+            margin-bottom: 20px;
             color: #475569;
+            font-size: 1.05rem;
             text-align: justify;
         }
 
-        .history-image-box {
-            background: #ffffff;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .history-image-box img {
-            width: 100%;
-            border-radius: 8px;
-            display: block;
-        }
-
-        /* Vision & Mission Cards */
-        .vision-mission-section {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .vm-card {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            border-top: 5px solid #002244;
-            transition: transform 0.3s ease;
-        }
-
-        .vm-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .vm-card.mission {
-            border-top-color: #f59e0b;
-        }
-
-        .vm-card h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
-            color: #002244;
-            margin-bottom: 15px;
-        }
-
-        .vm-card p {
-            font-size: 15px;
-            color: #475569;
-        }
-
-        /* Core Values Row */
-        .values-section {
-            background: #002244;
-            color: #ffffff;
-            padding: 5px 40px 40px 40px;
-            border-radius: 16px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0,34,68,0.15);
-        }
-
-        .values-title {
-            text-align: center;
-            margin-bottom: 40px;
-            margin-top: 30px;
-        }
-
-        .values-title h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 30px;
-            color: #f59e0b;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        .sidebar-panel {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
         }
 
-        .value-item {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.1);
+        .info-card-sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
         }
 
-        .value-item h4 {
-            font-size: 18px;
-            color: #ffffff;
-            margin-bottom: 10px;
+        .info-card-sidebar h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
         }
 
-        .value-item p {
-            font-size: 13px;
-            color: #94a3b8;
+        .facilities-section {
+            margin-top: 50px;
         }
 
-        /* Infrastructure / Facilities Section */
         .facilities-section h2 {
-            font-family: 'Merriweather', serif;
             text-align: center;
-            color: #002244;
-            font-size: 32px;
-            margin-bottom: 40px;
+            color: #1e3a8a;
+            margin-bottom: 35px;
+            font-size: 2rem;
         }
 
         .facilities-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .facility-card {
-            background: #ffffff;
+            background: white;
+            padding: 30px;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border-top: 4px solid #1e3a8a;
+            transition: transform 0.3s ease;
         }
 
-        .facility-info {
-            padding: 25px;
+        .facility-card:hover {
+            transform: translateY(-5px);
         }
 
         .facility-info h3 {
-            font-size: 18px;
-            color: #002244;
-            margin-bottom: 10px;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+            font-size: 1.25rem;
         }
 
         .facility-info p {
-            font-size: 14px;
             color: #64748b;
+            font-size: 0.95rem;
         }
 
-        /* Footer Section (Matching Home Page) */
+        /* Footer Styles */
         footer {
-            background: #001428;
+            background: #0f172a;
             color: #94a3b8;
-            padding: 40px 8% 20px 8%;
-            font-size: 14px;
-            border-top: 5px solid #f59e0b;
-        }
-
-        .footer-bottom {
+            padding: 25px 0;
             text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 13px;
+            margin-top: 60px;
         }
 
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 992px) {
-            .history-section { grid-template-columns: 1fr; }
-            .facilities-grid { grid-template-columns: repeat(2, 1fr); }
-            .values-grid { grid-template-columns: repeat(2, 1fr); }
+        .footer-bottom p {
+            font-size: 0.9rem;
+        }
+
+        /* ==========================================
+           RESPONSIVE MEDIA QUERIES
+           ========================================== */
+        @media (max-width: 968px) {
+            .about-main-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
-            .top-bar-modern { flex-direction: column; gap: 10px; text-align: center; }
-            .vision-mission-section { grid-template-columns: 1fr; }
-            .about-hero h1 { font-size: 36px; }
-        }
-
-        @media (max-width: 480px) {
-            .facilities-grid { grid-template-columns: 1fr; }
-            .values-grid { grid-template-columns: 1fr; }
-            .about-hero { height: 280px; padding: 0 5%; }
-            .about-hero h1 { font-size: 28px; }
-            .about-container { padding: 40px 5%; }
+            .top-bar-modern {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+                padding: 10px;
+            }
+            .top-bar-info span {
+                margin: 0 10px;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+                padding: 20px;
+                gap: 10px;
+                border-top: 1px solid #efefef;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="top-bar-modern">
-        <div class="top-contact">
+        <div class="top-bar-info">
+            <span>📍 Piparpur, Amethi, Uttar Pradesh</span>
             <span>📞 +91 XXXXXXXXXX</span>
-            <span>📧 info@shriasaldevedu.org</span>
+            <span>✉️ info@shriasaldev.org</span>
         </div>
-        <div class="top-location">DISE Code: XXXXXXXXXXX | Piparpur, Amethi</div>
+        <div class="top-bar-social">
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+        </div>
     </div>
 
-    <div class="main-header-modern">
-        <div class="header-logo">
-            <a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">
-                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Logo">
+    <div class="main-header-container">
+        <header class="main-header">
+            <a href="index.html" class="logo-brand-container">
+                <img src="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/favicon.png?v=4" alt="College Logo" class="school-logo">
+                <div class="brand-text">
+                    <h1>Shri Asal Dev Inter College</h1>
+                    <p>Piparpur, Bhadoyan, Amethi, Uttar Pradesh</p>
+                    <div class="motto-text">"शीलं परं भूषणम्"</div>
+                </div>
             </a>
-        </div>
+            
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="#">Academics</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
     </div>
 
-    <div class="nav-container-modern">
-        <ul class="nav-links-modern">
-            <li><a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="#">Admission</a></li>
-            <li><a href="#">Academics</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
-
-    <div class="about-hero">
-        <div class="about-hero-overlay"></div>
-        <div class="about-hero-content">
-            <span class="about-badge">Know Our Legacy</span>
+    <div class="about-wrapper">
+        <div class="about-hero-modern">
             <h1>About Our Institution</h1>
-            <p>Shaping young minds and fostering academic excellence since 1967 in rural and semi-urban landscapes.</p>
-        </div>
-    </div>
-
-    <div class="about-container">
-        
-        <div class="history-section">
-            <div class="history-text">
-                <h2>Our Rich History & Heritage</h2>
-                <p>Shri Asal Dev Inter College, situated in Piparpur, Amethi, was established in 1967 with a vision to provide high-quality education to students in rural and semi-urban areas. Named after the revered Shri Asal Dev Ji, the institution has stood as a beacon of knowledge and moral character for generations.</p>
-                <p>From its humble beginnings with just a few classrooms, the college has transformed into a premier inter college, offering comprehensive educational programs in Science, Arts, and Commerce streams under the curriculum guidelines of the state board.</p>
-                <p>Over the past five decades, our alumni have gone on to excel in various professional domains including civil services, medicine, engineering, and defense, keeping the school motto "Sheelam Param Bhushanam" close to their hearts.</p>
-            </div>
-            <div class="history-image-box">
-                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Campus View" style="max-height: 300px; object-fit: contain; margin: 0 auto;">
-            </div>
+            <p>Nurturing Excellence, Character, and Wisdom Since Inception</p>
         </div>
 
-        <div class="vision-mission-section">
-            <div class="vm-card">
-                <h3>Our Vision</h3>
-                <p>To be an educational institution of excellence that nurtures young individuals into intellectually competent, morally upright, and socially responsible citizens who can positively contribute to the growth of our nation.</p>
+        <div class="about-main-grid">
+            <div class="about-editorial">
+                <h2>Our Legacy & History</h2>
+                <p>Shri Asal Dev Inter College, located in the peaceful and culturally rich region of Piparpur, Amethi, stands as a beacon of academic brilliance and comprehensive personal development. Founded with a visionary outlook to provide high-quality, modern education grounded in traditional ethical values, our institution has consistently empowered generations of students to excel in various spheres of life.</p>
+                <p>We believe in providing an inclusive environment where intellectual curiosity is sparked, and students are given ample opportunities to discover their hidden potentials. Guided by our sacred motto <strong>"शीलं परं भूषणम्" (Character is the highest virtue)</strong>, our dedicated faculty works relentlessly to cultivate discipline, critical thinking, and leadership qualities in every single child.</p>
+                
+                <h2 style="margin-top: 35px;">Our Vision & Mission</h2>
+                <p><strong>Our Vision:</strong> To transform into a world-class premier learning community that fosters outstanding academic innovation, strong moral uprightness, and an unyielding sense of social responsibility among rural and urban students alike.</p>
+                <p><strong>Our Mission:</strong> To offer accessible, cutting-edge infrastructural resources, holistic educational programs, and a safe, nurturing environment that prepares future citizens to tackle dynamic global challenges with extreme confidence and empathy.</p>
             </div>
-            <div class="vm-card mission">
-                <h3>Our Mission</h3>
-                <p>To provide accessible, affordable, and high-quality modern education embedded with rich traditional values. We aim to create an inclusive learning ecosystem that fosters critical thinking, creativity, and robust physical development.</p>
-            </div>
-        </div>
 
-        <div class="values-section">
-            <div class="values-title">
-                <h2>Our Core Values</h2>
-            </div>
-            <div class="values-grid">
-                <div class="value-item">
-                    <h4>Character (Sheelam)</h4>
-                    <p>We place highest emphasis on integrity, modesty, and good behavior as true ornaments of education.</p>
+            <div class="sidebar-panel">
+                <div class="info-card-sidebar">
+                    <h3>Principal's Message</h3>
+                    <p style="font-size: 0.95rem; color: #475569; font-style: italic; line-height: 1.5; margin-bottom: 15px;">
+                        "Education is not merely the acquisition of facts, but the training of the mind to think and the soul to grow beautifully."
+                    </p>
+                    <strong style="color: #1e3a8a; font-size: 0.95rem;">- Dr. S. K. Pandey</strong>
                 </div>
-                <div class="value-item">
-                    <h4>Excellence</h4>
-                    <p>Striving continuously to raise the bar in academics, sports, and co-curricular domains.</p>
-                </div>
-                <div class="value-item">
-                    <h4>Inclusivity</h4>
-                    <p>Ensuring that every child, regardless of socio-economic background, receives equal opportunities.</p>
-                </div>
-                <div class="value-item">
-                    <h4>Discipline</h4>
-                    <p>Fostering self-regulation and dedication that helps students navigate challenges in adult life.</p>
+                <div class="info-card-sidebar">
+                    <h3>Quick Stats</h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #475569;">
+                        <li>👥 <strong>1500+</strong> Active Students</li>
+                        <li>👨‍🏫 <strong>50+</strong> Expert Educators</li>
+                        <li>🔬 <strong>4+</strong> Advanced Laboratories</li>
+                        <li>📚 <strong>5000+</strong> Library Books</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -470,7 +448,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <footer>
@@ -479,5 +456,11 @@
         </div>
     </footer>
 
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
