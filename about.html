@@ -24,76 +24,191 @@
             line-height: 1.6;
         }
 
-        /* Top Bar & Header Styles (Matching Home Page) */
+        /* ==========================================
+           MODERN HEADER & NAVIGATION STYLING (MVM STYLE)
+           ========================================== */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 100;
+        }
+
         .top-bar-modern {
-            background: #001428;
+            background: #17a2b8; /* MVM style cyan solid bar */
             color: #ffffff;
-            padding: 10px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 8px 5%;
             font-size: 13px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-weight: 600;
         }
 
         .top-contact {
             display: flex;
-            gap: 20px;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
-        .main-header-modern {
+        .top-contact span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .top-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .top-social a {
+            color: #ffffff;
+            text-decoration: none;
+            background: rgba(255,255,255,0.25);
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .top-social a:hover {
             background: #ffffff;
-            padding: 15px 8%;
+            color: #17a2b8;
+        }
+
+        /* NEW MVM STYLE MAIN HEADER */
+        .main-header-modern {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            position: relative;
-            z-index: 10;
+            padding: 20px 5%;
+            /* Cyan/Aqua gradient background resembling MVM */
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            border-bottom: 3px solid #00838f;
         }
 
         .header-logo img {
-            height: 70px;
-            cursor: pointer;
+            height: 130px;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+            background: #fff;
+            border-radius: 50%;
+            padding: 5px;
         }
 
-        /* Navigation Menu */
-        .nav-container-modern {
-            background: #002244;
-            padding: 0 8%;
-            position: sticky;
-            top: 0;
-            z-index: 999;
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        .header-center h1 {
+            font-size: 42px;
+            color: #d32f2f; /* Red text */
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            /* White outline effect */
+            text-shadow: 
+                -2px -2px 0 #fff,  
+                 2px -2px 0 #fff,
+                -2px  2px 0 #fff,
+                 2px  2px 0 #fff,
+                 3px  3px 8px rgba(0,0,0,0.3);
+            margin-bottom: 2px;
+            font-family: 'Arial Black', Impact, sans-serif;
+        }
+
+        .sub-title {
+            color: #4a148c; /* Purple text */
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .motto-badge {
+            display: inline-block;
+            background: #fff;
+            color: #5d4037;
+            padding: 8px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            border: 2px solid #bcaaa4;
+            margin-bottom: 12px;
+        }
+
+        .motto-bottom {
+            color: #0d47a1;
+            font-size: 20px;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .header-founder {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-founder img {
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: #fff;
+        }
+
+        .founder-name {
+            font-size: 13px;
+            color: #b71c1c;
+            font-weight: 800;
+            margin-top: 8px;
+            background: #fff;
+            padding: 3px 12px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-modern {
+            background-color: #003366;
+            border-bottom: 4px solid #c5a059;
+            display: flex;
+            justify-content: center;
         }
 
         .nav-links-modern {
             display: flex;
             list-style: none;
-            gap: 5px;
         }
 
-        .nav-links-modern li a {
+        .nav-links-modern a {
+            display: block;
             color: #ffffff;
             text-decoration: none;
-            padding: 16px 20px;
-            display: inline-block;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
+            padding: 16px 35px;
             transition: all 0.3s ease;
-            text-transform: uppercase;
         }
 
-        .nav-links-modern li a:hover,
-        .nav-links-modern li a.active {
-            background: #f59e0b;
-            color: #001428;
+        .nav-links-modern a:hover, .nav-links-modern a.active {
+            background-color: #c5a059;
+            color: #002244;
         }
 
         /* Grand About Hero Banner (SVM Style Alignment) */
         .about-hero {
             position: relative;
             height: 350px;
-            background: url('https://i.ibb.co/rGGwcRD8/logo.png') no-repeat center center/cover;
+            background: url('https://i.ibb.co/rGGwcRD8/logo.png') no-repeat center center/cover; /* Replace with campus image later */
             background-color: #001428;
             display: flex;
             align-items: center;
@@ -343,10 +458,15 @@
             .history-section { grid-template-columns: 1fr; }
             .facilities-grid { grid-template-columns: repeat(2, 1fr); }
             .values-grid { grid-template-columns: repeat(2, 1fr); }
+            .main-header-modern { flex-direction: column; text-align: center; gap: 25px; }
+            .header-center h1 { font-size: 32px; }
+            .sub-title { font-size: 16px; }
+            .nav-links-modern { flex-wrap: wrap; justify-content: center; }
         }
 
         @media (max-width: 768px) {
-            .top-bar-modern { flex-direction: column; gap: 10px; text-align: center; }
+            .top-bar-modern { flex-direction: column; gap: 12px; text-align: center; }
+            .top-contact { justify-content: center; gap: 10px; }
             .vision-mission-section { grid-template-columns: 1fr; }
             .about-hero h1 { font-size: 36px; }
         }
@@ -357,37 +477,55 @@
             .about-hero { height: 280px; padding: 0 5%; }
             .about-hero h1 { font-size: 28px; }
             .about-container { padding: 40px 5%; }
+            .header-center h1 { font-size: 26px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar-modern">
-        <div class="top-contact">
-            <span>📞 +91 XXXXXXXXXX</span>
-            <span>📧 info@shriasaldevedu.org</span>
+    <header>
+        <div class="top-bar-modern">
+            <div class="top-contact">
+                <span>📞 9455212640, 9696663754</span>
+                <span>📧 ravindrapratapsingh1978@gmail.com</span>
+                <span>📍 Piparpur, Amethi, UP</span>
+            </div>
+            <div class="top-social">
+                <a href="https://www.facebook.com/shriasaldevintercollege/" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com/@ravindrapratapsingh3511" target="_blank">YouTube</a>
+            </div>
         </div>
-        <div class="top-location">DISE Code: XXXXXXXXXXX | Piparpur, Amethi</div>
-    </div>
-
-    <div class="main-header-modern">
-        <div class="header-logo">
-            <a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">
-                <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Logo">
-            </a>
+        
+        <div class="main-header-modern">
+            <div class="header-logo">
+                <a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">
+                    <img src="https://i.ibb.co/rGGwcRD8/logo.png" alt="School Logo">
+                </a>
+            </div>
+            
+            <div class="header-center">
+                <h1>SHRI ASAL DEV INTER COLLEGE</h1>
+                <div class="sub-title">(Senior Secondary Public School for Boys & Girls)</div>
+                <div class="motto-badge">"Nurturing Values, Imparting Knowledge, Shaping Bright Futures."</div>
+                <div class="motto-bottom">Sheelam Param Bhushanam - Character is the highest virtue</div>
+            </div>
+            
+            <div class="header-founder">
+                <img src="https://i.ibb.co/Y7Zz6Qbm/founder.png" alt="Founder of the College">
+                <div class="founder-name">Late Babu Suryanarayan Singh</div>
+            </div>
         </div>
-    </div>
 
-    <div class="nav-container-modern">
-        <ul class="nav-links-modern">
-            <li><a href="https://divyanshchbs-commits.github.io/shri-asal-dev-inter-college/#">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="#">Admission</a></li>
-            <li><a href="#">Academics</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
+        <nav class="navbar-modern">
+            <ul class="nav-links-modern">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="about-hero">
         <div class="about-hero-overlay"></div>
