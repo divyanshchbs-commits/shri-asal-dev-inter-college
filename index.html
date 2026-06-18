@@ -1440,7 +1440,7 @@ width:68%;
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        if(localStorage.getItem("devPopupClosed")){
+        if(sessionStorage.getItem("devPopupClosed")){
             document.getElementById("devModalOverlay").style.display="none";
 
 document.body.style.overflow="auto";
@@ -1557,7 +1557,7 @@ modalBox.style.transform =
 
         // When the user clicks the 'X' button
         closeBtn.addEventListener("click", function() {
-            localStorage.setItem(
+            sessionStorage.setItem(
 "devPopupClosed",
 "true"
 );
