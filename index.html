@@ -1595,6 +1595,9 @@ closeBtn.click();
 }
 
 });
+        window.addEventListener("unload", function() {
+    sessionStorage.removeItem("devPopupClosed");
+});
     });
 </script>
 
